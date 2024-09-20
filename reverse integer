@@ -1,0 +1,22 @@
+class Solution {
+public:
+    int reverse(long long x) {
+        long long sum = 0;
+        
+        while(x != 0){
+            long long last = x % 10;
+            sum = (sum * 10) + last;
+            x = x / 10;
+            
+            
+        }
+        
+        if(sum >=pow(-2, 31) && sum <= pow(2, 31) - 1){
+            return sum;
+        }
+        else{
+            return 0;
+        }
+        
+    }
+};
